@@ -13,10 +13,11 @@ public class ColinMultipleChoiceGameCPT {
 	if (strGameChoice.equalsIgnoreCase("Help")) {	
 		// Will put in more code that redirects them to a help screen
 		con.println("Loading...");
+	}else if (strGameChoice.equalsIgnoreCase("Score")) {
+		// Will put in more code that redirects them to a score screen
+		con.println("Loading...");
 	}
-
- 
-
+		
 // MARVEL TEST
         TextInputFile MCU = new TextInputFile("MCU.txt");
         String[][] strMCU = new String[10][6];
