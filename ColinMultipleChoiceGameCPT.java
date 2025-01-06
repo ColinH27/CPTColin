@@ -10,12 +10,16 @@ public class ColinMultipleChoiceGameCPT {
 	// Player Will Type In What They Want To DO
 	String strGameChoice = con.readLine();	
 	
-	if (strGameChoice.equalsIgnoreCase("Help")) {	
-		// Will put in more code that redirects them to a help screen
+	if (strGameChoice.equalsIgnoreCase("Play")) {	
+		// Will put in more code that redirects them to screen where player can pick 1 of the 3 tests to play
+	}else if (strGameChoice.equalsIgnoreCase("Help")){
+		// Will direct player to a help screen
 		con.println("Loading...");
 	}else if (strGameChoice.equalsIgnoreCase("Score")) {
 		// Will put in more code that redirects them to a score screen
 		con.println("Loading...");
+	}else if (strGameChoice.equalsIgnoreCase("Quit")) {
+		//Will put option to quit game
 	}
 		
 // MARVEL TEST
