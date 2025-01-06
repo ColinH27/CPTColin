@@ -4,36 +4,18 @@ public class ColinMultipleChoiceGameCPT {
     public static void main(String[] args) {
         Console con = new Console();
 // MAIN MENU
-
-        con.println("To start the Marvel test, type in 'MCU' in all caps.");
-        con.print("Enter your choice: ");
-        String strTestChoice = con.readLine(); 
-		con.clear();
-
-        if (strTestChoice.equals("MCU")) {
-            // Redirect to Marvel test
-            con.println("Loading...");
-            con.println("Loading...");
-            con.println("Loading...");  
-
-		}
 		
-		
-		    con.clear();
-            con.println("Main Menu");
-            con.println("Type 'MCU' to start the Marvel test.");
-            con.println("Type 'Star Wars' to start the Star Wars test.");
-            con.println("Type 'EXIT' to quit the program.");
-            con.print("Enter your choice: ");
-            strTestChoice = con.readLine();
+		// Image That Shows Main Menu
+	
+	// Player Will Type In What They Want To DO
+	String strGameChoice = con.readLine();	
+	
+	if (strGameChoice.equalsIgnoreCase("Help")) {	
+		// Will put in more code that redirects them to a help screen
+		con.println("Loading...");
+	}
 
-            if (strTestChoice.equalsIgnoreCase("MCU")) {
-            } else if (strTestChoice.equalsIgnoreCase("Star Wars")) {
-            } else if (strTestChoice.equalsIgnoreCase("EXIT")) {
-                con.println("Goodbye!");
-            } else {
-                con.println("Invalid choice. Please try again.");
-            }
+ 
 
 // MARVEL TEST
         TextInputFile MCU = new TextInputFile("MCU.txt");
@@ -118,7 +100,7 @@ public class ColinMultipleChoiceGameCPT {
 
  
 
-       
+		
     }
 }
 
