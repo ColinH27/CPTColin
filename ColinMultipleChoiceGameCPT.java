@@ -53,8 +53,13 @@ public class ColinMultipleChoiceGameCPT {
 			String correctAnswer = correctAnswerLine.substring(correctAnswerLine.length() - 1);
 
 			// CHECK IF PLAYER'S RESPONSE IS CORRECT OR NOT 
+			// SCORING
+			int intMCUScore;
+			intMCUScore = 0;
+			
 			if (strChoice.equalsIgnoreCase(correctAnswer)) {
 				con.println("Correct!");
+				intMCUScore = intMCUScore + 1;
 			} else {
 				con.println("Incorrect:( The correct answer is " + correctAnswer + ".");
 			}
@@ -96,8 +101,13 @@ public class ColinMultipleChoiceGameCPT {
             String correctAnswer = correctAnswerLine.substring(correctAnswerLine.length() - 1);
 
             // CHECK IF PLAYER'S RESPONSE IS CORRECT OR NOT
+            // SCORING
+            int intStarWarsScore;
+            intStarWarsScore = 0;
+            
             if (strChoice.equalsIgnoreCase(correctAnswer)) {
                 con.println("Correct!");
+                intStarWarsScore = intStarWarsScore + 1;
             } else {
                 con.println("Incorrect:( The correct answer is " + correctAnswer + ".");
             }
