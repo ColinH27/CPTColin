@@ -18,10 +18,14 @@ public class ColinMultipleChoiceGameCPT {
         String strMenuChoice = "";  
         String strGameChoice = ""; 
         String strEnd = "";  
-
+		String strName = "";
 
 		while (true) {
-		
+	// 	ASK PLAYER FOR THEIR NAME
+		con.println("Enter your name");
+		strName = con.readLine();
+	
+	
         con.println("What would you like to do?");
         strMenuChoice = con.readLine();
 
@@ -110,7 +114,7 @@ public class ColinMultipleChoiceGameCPT {
                 }
             }
 
-       // Thank you for playing message
+       // Thank you for playing Screen
        con.println("What would you like to do now?");
        con.println("Type 'Quit' to quit or 'MM' to go back to the Menu");
        strEnd = con.readLine();
