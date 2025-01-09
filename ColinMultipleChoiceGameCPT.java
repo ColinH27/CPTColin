@@ -10,7 +10,7 @@ public class ColinMultipleChoiceGameCPT {
         // SET SCORE TO 0 FOR ALL 3 GAMES
         int intMCUScore = 0;
         int intStarWarsScore = 0;
-        int intCountriesScore = 0;
+        int intDCScore = 0;
         int intTotalScore = 0;
         int intAverageScore = 0;
 
@@ -42,8 +42,6 @@ public class ColinMultipleChoiceGameCPT {
         con.println("Type 'mcu' to view marvel test score!");
         con.println("Type 'sw' to view star wars test score!");
         con.println("Type 'c' to view guess the country test score!");
-        con.println("Type 'ts' to view total score for all 3 games!");
-        con.println("Type 'avg' to view score average for all 3 games!");
 
             con.println("Which score would you like to view?");
             String strScore = con.readLine();
@@ -52,14 +50,8 @@ public class ColinMultipleChoiceGameCPT {
                 con.println("Score: " + intMCUScore);
             } else if (strScore.equalsIgnoreCase("sw")) {
                 con.println("Score: " + intStarWarsScore);
-            } else if (strScore.equalsIgnoreCase("c")) {
-                con.println("Score: " + intCountriesScore);
-            } else if (strScore.equalsIgnoreCase("ts")) {
-                intTotalScore = intMCUScore + intStarWarsScore + intCountriesScore;
-                con.println("Score: " + intTotalScore);
-            } else if (strScore.equalsIgnoreCase("avg")) {
-                intAverageScore = intTotalScore / 3;
-                con.println("Score: " + intAverageScore);
+            } else if (strScore.equalsIgnoreCase("dc")) {
+                con.println("Score: " + intDCScore);
             }
         }
 
@@ -75,6 +67,7 @@ public class ColinMultipleChoiceGameCPT {
 
         // PLAY
         if (strMenuChoice.equalsIgnoreCase("p")) {
+            // INSERT IMAGE
             con.println("Type 'mcu' to play the MCU test!");
             con.println("Type 'sw' to play the Star Wars test!");
             con.println("Type 'c' to play guess the country!");
@@ -94,7 +87,7 @@ public class ColinMultipleChoiceGameCPT {
                 strMCU[intRow][3] = MCU.readLine(); // Option C
                 strMCU[intRow][4] = MCU.readLine(); // Option D
                 strMCU[intRow][5] = MCU.readLine(); // Correct Answer
-
+			// PRINTS QUESTION & OPTIONS 
                 con.println("Question " + (intRow + 1) + ":");
                 con.println(strMCU[intRow][0]);
                 con.println(strMCU[intRow][1]);
@@ -102,12 +95,14 @@ public class ColinMultipleChoiceGameCPT {
                 con.println(strMCU[intRow][3]);
                 con.println(strMCU[intRow][4]);
 
+			// PLAYER ENTERS ANSWER
                 con.print("Enter your answer: ");
                 String strChoice = con.readLine();
                 String correctAnswer = strMCU[intRow][5].substring(strMCU[intRow][5].length() - 1);
-
+			// CHECKS IF ANSWER IS CORRECT OR NOT
       if (strChoice.equalsIgnoreCase(correctAnswer)) {
           con.println("Correct!");
+         // SCORING
          intMCUScore = intMCUScore + 1;
          } else {
  con.println("Incorrect. The correct answer is " + correctAnswer + ".");
@@ -120,7 +115,7 @@ public class ColinMultipleChoiceGameCPT {
        strEnd = con.readLine();
         }
 
-        // STAR WARS TEST
+// STAR WARS TEST
         if (strGameChoice.equalsIgnoreCase("sw")) {
             TextInputFile StarWars = new TextInputFile("StarWars.txt");
             String[][] strStarWars = new String[10][6];
@@ -132,20 +127,21 @@ public class ColinMultipleChoiceGameCPT {
                 strStarWars[intRow][3] = StarWars.readLine();
                 strStarWars[intRow][4] = StarWars.readLine();
                 strStarWars[intRow][5] = StarWars.readLine();
-
+			// PRINTS QUESTION & OPTIONS 
                 con.println("Question " + (intRow + 1) + ":");
                 con.println(strStarWars[intRow][0]);
                 con.println(strStarWars[intRow][1]);
                 con.println(strStarWars[intRow][2]);
                 con.println(strStarWars[intRow][3]);
                 con.println(strStarWars[intRow][4]);
-
+			// PLAYER ENTERS ANSWER
                 con.print("Enter your answer: ");
                 String strChoice = con.readLine();
                 String correctAnswer = strStarWars[intRow][5].substring(strStarWars[intRow][5].length() - 1);
-
+			// CHECKS IF ANSWER IS CORRECT OR NOT
 	if (strChoice.equalsIgnoreCase(correctAnswer)) {
 		con.println("Correct!");
+			// SCORING
 			intStarWarsScore = intStarWarsScore + 1;
 	} else {
 	con.println("Incorrect. The correct answer is " + correctAnswer + ".");
@@ -154,34 +150,33 @@ public class ColinMultipleChoiceGameCPT {
         }
 
         // GUESS THE COUNTRY BY THE FLAG
-        if (strGameChoice.equalsIgnoreCase("c")) {
-            TextInputFile Countries = new TextInputFile("Countries.txt");
-            String[][] strCountries = new String[10][7];
+        if (strGameChoice.equalsIgnoreCase("dc")) {
+            TextInputFile DC = new TextInputFile("DC.txt");
+            String[][] strDC = new String[10][7];
 
             for (int intRow = 0; intRow < 10; intRow++) {
-                strCountries[intRow][0] = Countries.readLine();
-                strCountries[intRow][1] = Countries.readLine();
-                strCountries[intRow][2] = Countries.readLine();
-                strCountries[intRow][3] = Countries.readLine();
-                strCountries[intRow][4] = Countries.readLine();
-                strCountries[intRow][5] = Countries.readLine();
-                strCountries[intRow][6] = Countries.readLine();
-
+                strDC[intRow][0] = DC.readLine();
+                strDC[intRow][1] = DC.readLine();
+                strDC[intRow][2] = DC.readLine();
+                strDC[intRow][3] = DC.readLine();
+                strDC[intRow][4] = DC.readLine();
+                strDC[intRow][5] = DC.readLine();
+			// PRINTS QUESTION & OPTIONS
                 con.println("Question " + (intRow + 1) + ":");
-                con.println(strCountries[intRow][0]);
-                con.println(strCountries[intRow][1]);
-                con.println(strCountries[intRow][2]);
-                con.println(strCountries[intRow][3]);
-                con.println(strCountries[intRow][4]);
-                con.println(strCountries[intRow][5]);
-
+                con.println(strDC[intRow][0]);
+                con.println(strDC[intRow][1]);
+                con.println(strDC[intRow][2]);
+                con.println(strDC[intRow][3]);
+                con.println(strDC[intRow][4]);
+			// PLAYER ENTERS ANSWER
                 con.print("Enter your answer: ");
                 String strChoice = con.readLine();
-                String correctAnswer = strCountries[intRow][6].substring(strCountries[intRow][6].length() - 1);
-
+                String correctAnswer = strDC[intRow][5].substring(strDC[intRow][5].length() - 1);
+			// CHECKS IF CORRECT OR NOT
       if (strChoice.equalsIgnoreCase(correctAnswer)) {
             con.println("Correct!");
-            intCountriesScore = intCountriesScore + 1;
+            // SCORING
+            intDCScore = intDCScore + 1;
       } else {
  con.println("Incorrect. The correct answer is " + correctAnswer + ".");
 					}
