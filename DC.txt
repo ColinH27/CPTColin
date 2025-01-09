@@ -4,9 +4,58 @@ B Mars
 C Atlantis
 D Krypton
 Correct Answer is A
-Where does Aquaman's kingdom?
+2. Where does Aquaman's kingdom?
 A Atlantis
 B Gotham
 C Metropolis
 D Krypton
 Correct Answer is A
+3. Who is the main villain in The Dark Knight?
+A The Joker
+B Bane
+C Scarecrow
+D Two-Face
+Correct Answer is A
+4. What weapon does Aquaman use?
+A Dagger
+B Sword
+C Trident
+D Bow
+Correct Answer is C
+5. What is The Flash known for?
+A Flying
+B Super speed
+C Strength
+D Invisibility
+Correct Answer is B
+6. What is Batman's real name?
+A Bruce Wayne
+B Clark Kent
+C Barry Allen
+D Arthur Curry
+Correct Answer is A
+7. What city does Superman protect?
+A Gotham City
+B Metropolis
+C Central City
+D Atlantis
+Correct Answer is B
+8. Who is the villain in Man of Steel?
+A Lex Luthor
+B General Zod
+C Doomsday
+D Steppenwolf
+Correct Answer is B
+9. Who is the villain in The Dark Knight Rises?
+A Joker
+B Scarecrow
+C Bane
+D Lex Luthor
+Correct Answer is C
+10. What city does Superman protect?
+A Gotham City
+B Metropolis
+C Central City
+D Atlantis
+Correct Answer is A
+
