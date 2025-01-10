@@ -6,6 +6,14 @@ public class ColinMultipleChoiceGameCPT2024 {
     public static void main(String[] args) {
         Console con = new Console(" Multiple Choice Game", 1280, 720);
         
+        //THINGS I NEED TO ADD
+        // - IMAGES
+        // - RANDOMIZE QUESTIONS
+        // - ADD HELP SCREEN
+        // - FIX LEADERBOARD
+        // - SECRET MENU
+        
+        
         // SCORING
         // SET SCORE TO 0 FOR ALL 3 GAMES
         int intMCUScore = 0;
@@ -20,7 +28,9 @@ public class ColinMultipleChoiceGameCPT2024 {
 		String strName = "";
 		
 		// IMAGES
-		
+		// TUTORIALS/HELP
+		BufferedImage imgTutorial1 = con.loadImage("Tutorial UI #1.jpg");
+
 
 		while (true) {
 
@@ -50,7 +60,12 @@ public class ColinMultipleChoiceGameCPT2024 {
        con.println("To thank you 5 points have been added to total score!");
        // ADD Something
         }
+        
+        // "SECRET MENU"
+    if (strMenuChoice.equalsIgnoreCase("sm")) {
+		
 
+	}
         // VIEW SCORE SCREEN
 	if (strMenuChoice.equalsIgnoreCase("s")) {
 		    TextInputFile Score = new TextInputFile("Score.txt");
@@ -59,7 +74,13 @@ public class ColinMultipleChoiceGameCPT2024 {
 
         // HELP SCREEN (TUTORIAL)
         if (strMenuChoice.equalsIgnoreCase("h")) {
-            // Insert images of help
+			con.drawImage(imgTutorial1,  1280, 720);
+			con.sleep(5000);
+			con.clear();
+			// Image 2
+			con.sleep(5000);
+			con.clear();
+			
         }
 
         // QUIT GAME
