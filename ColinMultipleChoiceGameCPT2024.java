@@ -4,15 +4,14 @@ import java.awt.image.*;
 
 public class ColinMultipleChoiceGameCPT2024 {
     public static void main(String[] args) {
-        Console con = new Console();
+        Console con = new Console(" Multiple Choice Game", 1280, 720);
         
         // SCORING
         // SET SCORE TO 0 FOR ALL 3 GAMES
         int intMCUScore = 0;
         int intStarWarsScore = 0;
         int intDCScore = 0;
-        int intTotalScore = 0;
-        int intAverageScore = 0;
+
 
         // MAIN MENU
         String strMenuChoice = "";  
@@ -24,14 +23,21 @@ public class ColinMultipleChoiceGameCPT2024 {
 		
 
 		while (true) {
+
 	// 	ASK PLAYER FOR THEIR NAME
    		con.println("Enter your name");
 		strName = con.readLine();
 		con.println("Welcome " + strName + "!");
 		con.sleep(1000);
 		con.clear();
-  
+		con.println("Enter MM to go to main menu");
+		strEnd = con.readLine();
+		con.clear();
+	
     // MAIN MENU SCREEN
+		// MAIN MENU IMAGE
+	 if (strEnd.equalsIgnoreCase("MM")) {
+	
 		con.println("What would you like to do?");
         strMenuChoice = con.readLine();
         con.sleep(1000);
@@ -47,7 +53,8 @@ public class ColinMultipleChoiceGameCPT2024 {
 
         // VIEW SCORE SCREEN
 	if (strMenuChoice.equalsIgnoreCase("s")) {
-        // ADD LEADERBOARD
+		    TextInputFile Score = new TextInputFile("Score.txt");
+         // ADD LEADERBOARD
         }
 
         // HELP SCREEN (TUTORIAL)
@@ -69,7 +76,7 @@ public class ColinMultipleChoiceGameCPT2024 {
             strGameChoice = con.readLine();
         }
 
-        // MARVEL TEST
+// MARVEL TEST
         if (strGameChoice.equalsIgnoreCase("mcu")) {
             TextInputFile MCU = new TextInputFile("MCU.txt");
             String[][] strMCU = new String[10][6];
@@ -136,7 +143,7 @@ public class ColinMultipleChoiceGameCPT2024 {
        con.clear();
         }
 
-        // STAR WARS TEST
+// STAR WARS TEST
         if (strGameChoice.equalsIgnoreCase("sw")) {
             TextInputFile StarWars = new TextInputFile("StarWars.txt");
             String[][] strStarWars = new String[10][6];
@@ -192,7 +199,7 @@ public class ColinMultipleChoiceGameCPT2024 {
             }
             
           // Final Score Screen & Thank You Screen
-		con.println("Your Final Score" + intStarWarsScore + "!");
+		con.println("Your Final Score: " + intStarWarsScore + "!");
 		
 	// Thank you for playing Screen
        con.println("What would you like to do now?");
@@ -202,7 +209,7 @@ public class ColinMultipleChoiceGameCPT2024 {
             
         }
 
-        // DC TEST
+// DC TEST
         if (strGameChoice.equalsIgnoreCase("dc")) {
             TextInputFile DC = new TextInputFile("DC.txt");
             String[][] strDC = new String[10][7];
@@ -280,7 +287,7 @@ public class ColinMultipleChoiceGameCPT2024 {
 	
 	
 	
-			
+		}
 	}
 
 }
