@@ -17,6 +17,12 @@ public class ColinMultipleChoiceGameCPT2024 {
         String strName = "";
         String strChoice = "";
 
+
+
+		// Images
+		BufferedImage imgMMS = con.loadImage("MainMenuScreen.jpg");
+
+
         // Ask for player's name once
         con.println("Enter your name:");
         strName = con.readLine();
@@ -34,7 +40,7 @@ public class ColinMultipleChoiceGameCPT2024 {
 
             if (strChoice.equalsIgnoreCase("MM")) {
                 con.clear();
-                // MAIN MENU IMAGE
+				con.drawImage(imgMMS, 1280, 720);
                 con.println("Main Menu");
                 con.println("Type 'P' to Play");
                 con.println("Type 'S' to View Scores");
@@ -54,6 +60,7 @@ public class ColinMultipleChoiceGameCPT2024 {
                 // "SECRET MENU"
                 if (strMenuChoice.equalsIgnoreCase("sm")) {
                     // SECRET MENU IMAGE
+                    con.sleep(3000);
                 }
 
 		// VIEW SCORE SCREEN
