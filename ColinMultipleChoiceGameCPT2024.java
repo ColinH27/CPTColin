@@ -8,7 +8,7 @@ public class ColinMultipleChoiceGameCPT2024 {
 
         // Variables
         // SCORING VARIABLES
-        int intMCUScore = 0;
+        int intMarvelScore = 0;
         int intStarWarsScore = 0;
         int intDCScore = 0;
         
@@ -33,6 +33,9 @@ public class ColinMultipleChoiceGameCPT2024 {
         BufferedImage imgMCU = con.loadImage("MCUGameScreen.jpg");
         BufferedImage imgDC = con.loadImage("DCGameScreen.jpg");
         BufferedImage imgSTR = con.loadImage("StarWarsGameScreen.jpg");
+        
+        // SECRET MENU IMAGE
+        
 
         // Ask for player's name once
         con.println("Enter your name:");
@@ -61,11 +64,43 @@ public class ColinMultipleChoiceGameCPT2024 {
                 con.sleep(1000);
                 con.clear();
 
+				// STA TITAN
+			if (strMenuChoice.equalsIgnoreCase("statitan")) {
+			con.clear();
+			con.println("Congrats! It's your lucky day!!! ");
+			con.println("To thank you 5 points will be added to the");
+			con.println("score of the next game that you play!");
+			if (strGameChoice.equalsIgnoreCase("dc")) {
+					intDCScore = intDCScore + 5;
+				}		
+					
+			if (strGameChoice.equalsIgnoreCase("sw")) {
+					intStarWarsScore = intStarWarsScore + 5;
+				}
+				
+			if (strGameChoice.equalsIgnoreCase("mcu")) {
+					intMarvelScore = intMarvelScore + 5;
+				}
+				
+			
+			}
+				// SECRET MENU
+			if (strMenuChoice.equalsIgnoreCase("sm")) {
+				con.println("Congrats you found the secret menu!");
+				con.sleep(2000);
+				con.clear();
+				
+				// Secert Menu Image
+				
+				
+		
+			}
+					
                 // SCORE SCREEN
                 if (strMenuChoice.equalsIgnoreCase("s")) {
                     TextInputFile Scores = new TextInputFile("HighScores.txt");
                     while (!Scores.eof()) {
-                        con.println(Scores.readLine()); // Player's Nam
+                        con.println(Scores.readLine()); // Player's Name
                         con.println(Scores.readLine()); // Test That Player Chose
                         con.println(Scores.readLine()); // Score
                         
@@ -136,7 +171,7 @@ public class ColinMultipleChoiceGameCPT2024 {
                             if (strChoice.equalsIgnoreCase(strMCU[intRow][5].substring(strMCU[intRow][5].length() - 1))) {
                                 con.println("Correct!");
                                 // ADDS POINT IF CORRECT
-                                intMCUScore = intMCUScore + 1;
+                                intMarvelScore = intMarvelScore + 1;
                             } else {
                                 con.println("Incorrect. The correct answer is " + strMCU[intRow][5] + ".");
                             }
@@ -147,8 +182,8 @@ public class ColinMultipleChoiceGameCPT2024 {
                         TextOutputFile HighScoresFile = new TextOutputFile("HighScores.txt", true);
                         HighScoresFile.println(strName);
                         HighScoresFile.println("MCU TEST");
-                        HighScoresFile.println(intMCUScore + "/10");
-                        con.println("Your Final Score: " + intMCUScore + "!");
+                        HighScoresFile.println(intMarvelScore + "/10");
+                        con.println("Your Final Score: " + intMarvelScore + "!");
                         con.println("Type 'MM' to go back to the Menu");
                         strEndOfGame = con.readLine();
                         con.clear();
