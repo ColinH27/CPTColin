@@ -35,7 +35,7 @@ public class ColinMultipleChoiceGameCPT2024 {
         BufferedImage imgSTR = con.loadImage("StarWarsGameScreen.jpg");
         
         // SECRET MENU IMAGE
-        
+        //BufferedImage imgSM = con.loadImage();(".jpg");
 
         // Ask for player's name once
         con.println("Enter your name:");
@@ -99,12 +99,20 @@ public class ColinMultipleChoiceGameCPT2024 {
                 // SCORE SCREEN
                 if (strMenuChoice.equalsIgnoreCase("s")) {
                     TextInputFile Scores = new TextInputFile("HighScores.txt");
-                    while (!Scores.eof()) {
-                        con.println(Scores.readLine()); // Player's Name
-                        con.println(Scores.readLine()); // Test That Player Chose
-                        con.println(Scores.readLine()); // Score
-                        
-                    }
+                 
+					String strPlayerName;
+                    String strGame;
+                    int intScore;
+                    
+                    strPlayerName = con.readLine();
+                    strGame = con.readLine();
+                    intScore = con.readInt();
+                    
+					con.println(strPlayerName);		
+					con.println(strGame);
+					con.println(intScore);
+					
+                 
                     con.println("Press Enter to return to the Main Menu");
                     con.readLine();
                     con.clear();
