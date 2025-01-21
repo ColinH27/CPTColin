@@ -35,7 +35,7 @@ public class ColinMultipleChoiceGameCPT2024 {
         BufferedImage imgSTR = con.loadImage("StarWarsGameScreen.jpg");
         
         // SECRET MENU IMAGE
-        //BufferedImage imgSM = con.loadImage();(".jpg");
+        BufferedImage imgSM = con.loadImage("SecretMenu.jpg");
 
         // Ask for player's name once
         con.println("Enter your name:");
@@ -89,11 +89,16 @@ public class ColinMultipleChoiceGameCPT2024 {
 				con.println("Congrats you found the secret menu!");
 				con.sleep(2000);
 				con.clear();
+				// Secret Menu Image
+                con.drawImage(imgSM, 0, 0);
 				
-				// Secert Menu Image
+				
+				con.clear();
+				con.println("Hit the enter key to go back to main menuu");
+				con.readLine();
 				
 				
-		
+				
 			}
 					
                 // SCORE SCREEN
