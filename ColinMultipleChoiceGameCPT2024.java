@@ -91,12 +91,18 @@ public class ColinMultipleChoiceGameCPT2024 {
 				con.clear();
 				// Secret Menu Image
                 con.drawImage(imgSM, 0, 0);
-				
-				
+				con.println("Never gonna give you up");
+				con.sleep(1000);
+				con.clear();
+				con.println("Never gonna let you down");
+				con.sleep(1000);
+				con.clear();
+				con.println("Never gonna run around and desert you");
+				con.sleep(1000);
 				con.clear();
 				con.println("Hit the enter key to go back to main menuu");
 				con.readLine();
-				
+				con.clear();
 				
 				
 			}
